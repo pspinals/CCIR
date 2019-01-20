@@ -57,7 +57,7 @@ public class GameController : MonoBehaviour {
     void Start() {
         score = 0;
         wave = 0;
-        damage = 5;
+        damage = 1;
         liveTreshold = 2000;
         nextLiveTreshold = liveTreshold;
         gameOver = false;
@@ -71,10 +71,10 @@ public class GameController : MonoBehaviour {
     void Update() {
         if(restart) {
             if(Input.GetKeyDown(KeyCode.R)) {
-                SceneManager.LoadScene("Main");
+                SceneManager.LoadScene(1);
             }
             if(Input.GetKeyDown(KeyCode.Q)) {
-                Application.Quit();
+                SceneManager.LoadScene(0);
             }
         }
     }
@@ -113,7 +113,7 @@ public class GameController : MonoBehaviour {
                 Instantiate(asteroid, spawnPosition, spawnRotation);
                 yield return new WaitForSeconds(spawnWait);
                 if(gameOver) {
-                    restartText.text = "Press 'R' to restart\nPress 'Q' to quit";
+                    restartText.text = "Press 'R' to restart\nPress 'Q' to quit to menu";
                     restart = true;
                     break;
                 }
