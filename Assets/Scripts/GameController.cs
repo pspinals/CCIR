@@ -64,6 +64,7 @@ public class GameController : MonoBehaviour {
         restart = false;
         restartText.text = "";
         gameOverText.text = "";
+        Time.timeScale = 1.0f;
         UpdateScore();
         StartCoroutine (SpawnWaves());
     }

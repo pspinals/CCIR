@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-D:/Unity/Projects/CCIR/Builds/CCIR.exe
+D:/Git/CCIR/Builds/CCIR.exe
 SceneListBegin?
 Assets/_Scenes/Main Menu.unity
 Assets/_Scenes/Main.unity

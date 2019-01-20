@@ -12,7 +12,7 @@ public class DestroyByContact : MonoBehaviour {
     public float baseHealth;
     public float enemyHealth;
     private float damage;
-    public static int nextWeapon;
+    public static int nextWeapon = 0;
     public static int enemyCount;
 
     void Start() {
@@ -21,7 +21,6 @@ public class DestroyByContact : MonoBehaviour {
             gameController = gameControllerobject.GetComponent<GameController>();
         if(gameControllerobject == null) Debug.Log("Cannot find 'GameController' script");
         enemyHealth = baseHealth + gameControllerobject.GetComponent<GameController>().wave + 1;
-        nextWeapon = 0;
     }
 
 	void OnTriggerEnter(Collider other) {
