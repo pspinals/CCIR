@@ -57,7 +57,7 @@ public class GameController : MonoBehaviour {
     void Start() {
         score = 0;
         wave = 0;
-        damage = 1;
+        damage = 2;
         liveTreshold = 2000;
         nextLiveTreshold = liveTreshold;
         gameOver = false;
@@ -91,7 +91,7 @@ public class GameController : MonoBehaviour {
                 Instantiate(boss, spawnPosition, spawnRotation);
                 DestroyByContact.enemyCount = 1;
             } else {
-                waveType = Random.Range(0, 5);
+                waveType = Random.Range(0, 4);
                 switch(waveType) {
                     case 0:
                         SimpleWave();
